@@ -28,7 +28,6 @@ function renderLead() {
         //     // ulEl.append(li)
         // }
 
-        console.log(listItem)
         ulEl.innerHTML += listItem
     }
 }
