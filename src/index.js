@@ -7,6 +7,7 @@ const ulEl = document.getElementById('ul-el')
 inputBtn.addEventListener('click', () => {
     const record = inputEl.value
     myLeads.push(record)
+    inputEl.value = ''
     renderLeads()
 })
 
