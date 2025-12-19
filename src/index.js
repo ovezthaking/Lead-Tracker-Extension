@@ -6,5 +6,7 @@ const inputBtn = document.getElementById('input-btn')
 inputBtn.addEventListener('click', () => {
     const record = inputEl.value
     myLeads.push(record)
-    console.log(myLeads)
+    for (lead of myLeads) {
+        console.log(lead)
+    }
 })
