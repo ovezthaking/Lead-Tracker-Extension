@@ -3,6 +3,8 @@ let myLeads = []
 const inputBtn = document.getElementById('input-btn')
 const ulEl = document.getElementById('ul-el')
 
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
+
 
 inputBtn.addEventListener('click', () => {
     const record = inputEl.value
