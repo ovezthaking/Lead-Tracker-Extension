@@ -16,9 +16,11 @@ const tabs = [
 ]
 
 tabBtn.addEventListener('click', () => {
-    for (items of tabs){
-        console.log(items.url)
+    for (item of tabs){
+        myLeads.push(item.url)
     }
+    localStorage.setItem('myLeads', JSON.stringify(myLeads))
+    render(myLeads)
 })
 
 function render(leads) {
