@@ -2,6 +2,7 @@ const inputEl = document.getElementById('input-el')
 let myLeads = []
 const inputBtn = document.getElementById('input-btn')
 const ulEl = document.getElementById('ul-el')
+const deleteBtn = document.getElementById('delete-btn')
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
 if (leadsFromLocalStorage) {
@@ -9,6 +10,11 @@ if (leadsFromLocalStorage) {
     renderLocalLeads()
 }
 
+deleteBtn.addEventListener('dblclick', () => {
+    myLeads = []
+    localStorage.clear()
+    renderLocalLeads()
+})
 
 inputBtn.addEventListener('click', () => {
     const record = inputEl.value
