@@ -16,6 +16,9 @@ const tabs = [
 ]
 
 tabBtn.addEventListener('click', () => {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        
+    })
     for (item of tabs){
         myLeads.push(item.url)
     }
