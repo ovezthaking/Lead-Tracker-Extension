@@ -3,13 +3,13 @@ let myLeads = []
 const inputBtn = document.getElementById('input-btn')
 const ulEl = document.getElementById('ul-el')
 
-localStorage.setItem('myLeads', 'www.examplelead.com')
 
 inputBtn.addEventListener('click', () => {
     const record = inputEl.value
     myLeads.push(record)
     renderLead()
     inputEl.value = ''
+    localStorage.setItem('myLeads', JSON.stringify(myLeads))
 })
 
 function renderLead() {
